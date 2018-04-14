@@ -2,7 +2,7 @@
 ## Author: github.com/thelinuxchoice
 ## IG: instagram.com/thelinuxchoice
 ### Don't copy this code without give me the credits, bitch! 
-Instainsane is an Shell Script to perform multi-threaded brute force attack against Instagram, this script can bypass login limiting and it can test infinite number of passwords with a rate of +1000 passwords/min with 100 attemps at once.
+Instainsane is an Shell Script to perform multi-threaded brute force attack against Instagram, this script can bypass login limiting and it can test infinite number of passwords with a rate of about 1000 passwords/min with 100 attemps at once.
 
 ![insane](https://user-images.githubusercontent.com/34893261/38772658-97646698-4012-11e8-9b5e-65596e70a5ff.png)
 
@@ -31,7 +31,7 @@ sudo ./install.sh
 
 ### How it works?
 
-Script uses an Android ApkSignature to perform authentication in addition using TOR and rotating the ip address to avoid blocking. 
+Script uses an Android ApkSignature to perform authentication in addition using TOR instances to avoid blocking. 
 The script uses Instagram-py algorithm (Python), see the project at: https://github.com/antony-jr/instagram-py
 Thanks to: @antony-jy https://github.com/antony-jr
 
