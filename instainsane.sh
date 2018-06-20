@@ -571,7 +571,7 @@ checkroot
 dependencies
 start
 multitor
-
+killall -HUP tor
 while [ $countpass -lt $count_pass ]; do
 
 killall -HUP tor
