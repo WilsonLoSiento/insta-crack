@@ -214,7 +214,7 @@ fi
 
 bf1() {
 
-while [ $counter -lt $turn ]; do
+while [[ "$counter" -lt "$turn" ]]; do
 
 IFS=$'\n'
 for pass in $(sed -n ''$startline','$endline'p' $wl_pass); do
@@ -243,7 +243,7 @@ done
 
 bf2() {
 
-while [ $counter2 -lt $turn ]; do
+while [[ $counter2 -lt "$turn" ]]; do
 count_pass=$(wc -l $wl_pass | cut -d " " -f1)
 IFS=$'\n'
 for pass in $(sed -n ''$((startline+sumstart))','$endline'p' $wl_pass); do
@@ -272,7 +272,7 @@ done
 
 bf3() {
 
-while [ $counter3 -lt $turn ]; do
+while [[ "$counter3" -lt "$turn" ]]; do
 count_pass=$(wc -l $wl_pass | cut -d " " -f1)
 IFS=$'\n'
 for pass in $(sed -n ''$((startline+sumstart))','$endline'p' $wl_pass); do
@@ -328,7 +328,7 @@ done
 
 bf5() {
 
-while [ $counter5 -lt $turn ]; do
+while [[ "$counter5" -lt "$turn" ]]; do
 count_pass=$(wc -l $wl_pass | cut -d " " -f1)
 IFS=$'\n'
 for pass in $(sed -n ''$((startline+sumstart))','$endline'p' $wl_pass); do
@@ -356,7 +356,7 @@ done
 
 bf1resume() {
 
-while [ $counter -lt $turn ]; do
+while [[ "$counter" -lt "$turn" ]]; do
 startresume=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1) 
 startresume1=$((startresume+1))
 IFS=$'\n'
@@ -386,7 +386,7 @@ done
 
 bf2resume() {
 
-while [ $counter2 -lt $turn ]; do
+while [[ "$counter2" -lt "$turn" ]]; do
 count_pass=$(wc -l $wl_pass | cut -d " " -f1)
 IFS=$'\n'
 startresume=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1) 
@@ -417,7 +417,7 @@ done
 
 bf3resume() {
 
-while [ $counter3 -lt $turn ]; do
+while [[ "$counter3" -lt "$turn" ]]; do
 count_pass=$(wc -l $wl_pass | cut -d " " -f1)
 IFS=$'\n'
 startresume=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1) 
@@ -483,7 +483,7 @@ done
 
 bf5resume() {
 
-while [ $counter5 -lt $turn ]; do
+while [[ "$counter5" -lt "$turn" ]]; do
 count_pass=$(wc -l $wl_pass | cut -d " " -f1)
 IFS=$'\n'
 startresume=$(grep -n -x "$pass" "$wl_pass" | cut -d ":" -f1) 
@@ -572,7 +572,7 @@ dependencies
 start
 multitor
 killall -HUP tor
-while [ $countpass -lt $count_pass ]; do
+while [[ "$countpass" -lt "$count_pass" ]]; do
 
 killall -HUP tor
 ##pkill -f -HUP "tor -f multitor/multitor1"; pkill -f -HUP "tor -f multitor/multitor2"; pkill -f -HUP "tor -f multitor/multitor3";pkill -f -HUP "tor -f multitor/multitor4";pkill -f -HUP "tor -f multitor/multitor5"
